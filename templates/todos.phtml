@@ -28,11 +28,8 @@
     <body>
         <h1>Todo App</h1>
         <div>a microframework for PHP</div>
-
-        <?php if (isset($name)) : ?>
-            <h2>Hello <?= htmlspecialchars($name); ?>!</h2>
-        <?php else: ?>
-            <p>See All <a href="/todos">Todos</a></p>
-        <?php endif; ?>
+        
+        <?php echo \Todos\ViewHelpers\TodosPageViewHelper::outputTodos($todos) ?>
+        <a href="/">Back to Homepage</a>
     </body>
 </html>

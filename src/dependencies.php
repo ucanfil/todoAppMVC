@@ -17,3 +17,7 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
     return $logger;
 };
+
+// Todos Controller factory
+$container['TodosController'] = new \Todos\Factories\TodosControllerFactory();
+$container['TodosModel'] = new \Todos\Factories\TodosModelFactory();

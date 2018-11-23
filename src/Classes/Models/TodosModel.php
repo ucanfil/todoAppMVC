@@ -23,4 +23,10 @@ class TodosModel
         $query->execute();
         return $query->fetchAll();
     }
+
+    public function addNewTodo(string $newTodo)
+    {
+        $query = $this->db->prepare('INSERT INTO `todos` (`todo`) VALUES (:query)');
+        $query->execute([':query' => $newTodo]);
+    }
 }

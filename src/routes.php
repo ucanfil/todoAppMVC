@@ -12,4 +12,4 @@ $app->get('/', function (Request $request, Response $response, array $args) {
 
 $app->get('/todos', 'TodosController');
 
-$app->post('/addTodo', 'NewTodo');
+$app->post('/todos', 'NewTodoController');

@@ -20,4 +20,9 @@ $container['logger'] = function ($c) {
 
 // Todos Controller factory
 $container['TodosController'] = new \Todos\Factories\TodosControllerFactory();
+
+// Todos Model factory
 $container['TodosModel'] = new \Todos\Factories\TodosModelFactory();
+
+// NewTodos Controller factory
+$container['NewTodoController'] = new \Todos\Factories\NewTodoControllerFactory();

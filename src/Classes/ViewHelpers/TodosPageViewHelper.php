@@ -8,7 +8,7 @@ class TodosPageViewHelper
         $html = '';
         // var_dump($todos);
         foreach ($todos as $todo) {
-            $html .= $todo['id'] . '- ' . $todo['todo'] . "<a href='/todo_" . $todo['id'] . "'> mark as completed</a>" . '<br>';
+            $html .= $todo['todo'] . "<a href='/todo_" . $todo['id'] . "'>          completed</a>" . '<br>';
         }
         return $html;
     }
@@ -17,7 +17,7 @@ class TodosPageViewHelper
     {
         $html = '';
         foreach ($completed as $todo) {
-            $html .= $todo['id'] . '- ' . $todo['todo'] . '<br>';
+            $html .= $todo['todo'] . '<br>';
         }
         return $html;
     }

@@ -26,3 +26,6 @@ $container['TodosModel'] = new \Todos\Factories\TodosModelFactory();
 
 // NewTodos Controller factory
 $container['NewTodoController'] = new \Todos\Factories\NewTodoControllerFactory();
+
+// UpdateStatus Controller factory
+$container['UpdateStatusController'] = new \Todos\Factories\UpdateStatusControllerFactory();

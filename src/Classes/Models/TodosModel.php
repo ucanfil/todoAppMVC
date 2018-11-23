@@ -29,4 +29,10 @@ class TodosModel
         $query = $this->db->prepare('INSERT INTO `todos` (`todo`) VALUES (:query)');
         $query->execute([':query' => $newTodo]);
     }
+
+    public function updateStatus($id, $status)
+    {
+        $query = $this->db->prepare('UPDATE `todos` SET `status` = :status WHERE `id` = :id');
+        $query->execute(['id' => $id, ':status' => $status]);
+    }
 }

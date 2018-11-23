@@ -8,7 +8,10 @@ class TodosPageViewHelper
         $html = '';
         // var_dump($todos);
         foreach ($todos as $todo) {
-            $html .= $todo['todo'] . "<a href='/todo_" . $todo['id'] . "'>          completed</a>" . '<br>';
+            $html .= "<div>" . $todo['todo'] .
+                        "<input type='checkbox' name='" . $todo['id'] . "'id='todo_" . $todo['id'] . "'>
+                        <label for='todo_" . $todo['id'] . "'> done!</label>
+                    </div>";
         }
         return $html;
     }

@@ -12,7 +12,7 @@ class TodosModel
 
     public function getPendingTodos()
     {
-        $query = $this->db->prepare('SELECT `todo`, `id` FROM `todos` WHERE `status` = 0 ORDER BY `id`');
+        $query = $this->db->prepare('SELECT `todo`, `id`, `status` FROM `todos` WHERE `status` = 0 ORDER BY `id`');
         $query->execute();
         return $query->fetchAll();
     }

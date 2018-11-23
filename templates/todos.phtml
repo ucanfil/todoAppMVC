@@ -28,7 +28,12 @@
     <body>
         <h1>Todo App</h1>
         <h2>Pending Todos</h2>
-        <?php echo \Todos\ViewHelpers\TodosPageViewHelper::outputPendingTodos($todos) ?>
+        <div>
+            <form action="/status" method="POST">
+            <?php echo \Todos\ViewHelpers\TodosPageViewHelper::outputPendingTodos($todos) ?>
+                <input type="submit" value="Save">
+            </form>
+        </div>
         <h2>Completed Todos</h2>
         <?php echo \Todos\ViewHelpers\TodosPageViewHelper::outputCompletedTodos($completed) ?>
         <br><br>

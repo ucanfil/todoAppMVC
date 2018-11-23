@@ -27,8 +27,13 @@
     </head>
     <body>
         <h1>Todo App</h1>
-        <div>a microframework for PHP</div>
-
+        <div>--- Add New Todo ---</div>
+        <div>
+            <form action="/addTodo" method="POST">
+                <input type="text" name="todo">
+                <input type="submit" value="Save">
+            </form>
+        </div>
         <?php if (isset($name)) : ?>
             <h2>Hello <?= htmlspecialchars($name); ?>!</h2>
         <?php else: ?>

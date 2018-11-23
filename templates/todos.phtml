@@ -27,9 +27,11 @@
     </head>
     <body>
         <h1>Todo App</h1>
-        <div>a microframework for PHP</div>
-        
-        <?php echo \Todos\ViewHelpers\TodosPageViewHelper::outputTodos($todos) ?>
+        <h2>Pending Todos</h2>
+        <?php echo \Todos\ViewHelpers\TodosPageViewHelper::outputPendingTodos($todos) ?>
+        <h2>Completed Todos</h2>
+        <?php echo \Todos\ViewHelpers\TodosPageViewHelper::outputCompletedTodos($completed) ?>
+        <br><br>
         <a href="/">Back to Homepage</a>
     </body>
 </html>

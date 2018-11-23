@@ -18,7 +18,8 @@ class TodosController
 
     public function __invoke(Request $request, Response $response, array $args)
     {
-        $args['todos'] = $this->todosModel->getTodos();
+        $args['todos'] = $this->todosModel->getPendingTodos();
+        $args['completed'] = $this->todosModel->getCompletedTodos();
         return $this->renderer->render($response, 'todos.phtml', $args);
     }
 }

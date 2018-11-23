@@ -10,11 +10,17 @@ class TodosModel
         $this->db = $db;
     }
 
-    public function getTodos()
+    public function getPendingTodos()
     {
-        $query = $this->db->prepare('SELECT `todo` FROM `todos` ORDER BY `id`');
+        $query = $this->db->prepare('SELECT `todo`, `id` FROM `todos` WHERE `status` = 0 ORDER BY `id`');
         $query->execute();
         return $query->fetchAll();
     }
 
+    public function getCompletedTodos()
+    {
+        $query = $this->db->prepare('SELECT `todo`, `id` FROM `todos` WHERE `status` = 1 ORDER BY `id`');
+        $query->execute();
+        return $query->fetchAll();
+    }
 }
